@@ -20,19 +20,16 @@ body::after{content:"";position:fixed;inset:0;background:radial-gradient(ellipse
 .scanline{position:fixed;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,transparent,rgba(0,245,255,.5),transparent);animation:scanline 6s linear infinite;pointer-events:none;z-index:9999;opacity:.6}
 @keyframes scanline{0%{top:-3px}100%{top:100vh}}
 canvas#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;transition:all .4s;backdrop-filter:blur(0px)}
 nav.scrolled{background:rgba(10,10,20,.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,245,255,.15);box-shadow:0 4px 30px rgba(0,0,0,.5)}
 .nav-logo{font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .nav-links{display:flex;gap:6px;flex-wrap:wrap}
 .nav-links a{color:var(--text-dim);text-decoration:none;font-size:.82rem;padding:5px 12px;border-radius:20px;transition:all .3s;letter-spacing:.3px}
 .nav-links a:hover{color:var(--neon-cyan);background:rgba(0,245,255,.08)}
-
 section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0 auto}
 .section-label{font-size:.75rem;color:var(--neon-cyan);font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;text-align:center}
-.section-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:16px;color:#fff;line-height:1.3;text-align:center}.section-title .acc{color:var(--neon-cyan)}
+.section-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-bottom:16px;color:#fff;line-height:1.3;text-align:center}
 .section-desc{color:var(--text-dim);font-size:.95rem;max-width:680px;line-height:1.8;margin-bottom:48px;margin-left:auto;margin-right:auto}
-
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 22px;border:1px solid rgba(0,245,255,.3);border-radius:50px;background:rgba(0,245,255,.05);font-size:.8rem;color:var(--neon-cyan);margin-bottom:28px;animation:fadeInDown .8s ease;letter-spacing:1px}
 .hero-badge .dot{width:8px;height:8px;background:var(--neon-cyan);border-radius:50%;animation:pulse 2s infinite}
@@ -51,7 +48,6 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-dim);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;animation:bounce 2s infinite}
 @keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
-
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px;max-width:900px;margin-left:auto;margin-right:auto}
 .stat-card{background:rgba(17,17,24,.8);border:1px solid rgba(0,245,255,.1);border-radius:24px;padding:36px 28px;text-align:center;transition:all .4s;opacity:0;transform:translateY(20px)}
 .stat-card.visible{opacity:1;transform:translateY(0)}
@@ -59,17 +55,13 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .stat-num{font-size:3.4rem;font-weight:900;font-family:"Inter",sans-serif;background:linear-gradient(135deg,var(--neon-cyan),var(--neon-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:10px}
 .stat-unit{font-size:1.4rem;font-weight:700}
 .stat-label{color:var(--text-dim);font-size:.9rem}
-.stat-sub{color:var(--neon-cyan);font-size:.78rem;margin-top:6px;opacity:.8}
-
 .about-card{background:linear-gradient(135deg,rgba(17,17,24,.9),rgba(24,24,31,.9));border:1px solid rgba(0,245,255,.08);border-radius:24px;padding:52px;max-width:900px;margin:0 auto;opacity:0;transform:translateY(20px);transition:all .6s ease}
 .about-card.visible{opacity:1;transform:translateY(0)}
 .about-card p{color:var(--text-dim);font-size:.97rem;margin-bottom:18px;line-height:1.9}
-.about-card p:last-of-type{margin-bottom:24px}
 .highlight{color:var(--neon-cyan);font-weight:600}
 .tags{display:flex;flex-wrap:wrap;gap:10px}
 .tag{padding:7px 16px;border-radius:14px;font-size:.82rem;background:rgba(0,245,255,.07);color:var(--neon-cyan);border:1px solid rgba(0,245,255,.15);transition:all .3s;cursor:default}
 .tag:hover{background:rgba(0,245,255,.15);border-color:var(--neon-cyan)}
-
 .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:26px;margin-top:40px}
 .edu-card{background:linear-gradient(135deg,rgba(0,245,255,.04),rgba(180,0,255,.04));border:1px solid rgba(0,245,255,.12);border-radius:24px;padding:42px;opacity:0;transform:translateY(20px);transition:all .5s ease}
 .edu-card.visible{opacity:1;transform:translateY(0)}
@@ -82,16 +74,15 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .edu-note{color:var(--text-dim);font-size:.88rem;margin-top:16px;line-height:1.8}
 .edu-courses{margin-top:20px}
 .edu-course{color:var(--text-dim);font-size:.85rem;padding:4px 0 4px 18px;position:relative;line-height:1.7}
-.edu-course::before{content:"•";position:absolute;left:0;color:var(--neon-cyan)}
+.edu-course::before{content:"\2022";position:absolute;left:0;color:var(--neon-cyan)}
 .edu-awards{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
 .edu-award{padding:4px 14px;border-radius:12px;font-size:.75rem;background:rgba(0,245,255,.07);color:var(--neon-cyan);border:1px solid rgba(0,245,255,.15)}
-
 .papers-container{margin-top:50px;display:flex;flex-direction:column;gap:30px;max-width:900px;margin-left:auto;margin-right:auto}
 .paper-title{font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(0,245,255,.1);letter-spacing:.5px}
 .paper-card{background:rgba(17,17,24,.7);border:1px solid rgba(180,0,255,.15);border-radius:22px;padding:40px;opacity:0;transform:translateY(20px);transition:all .6s ease}
 .paper-card.visible{opacity:1;transform:translateY(0)}
 .paper-card:hover{border-color:rgba(180,0,255,.35);transform:translateY(-4px)}
-.paper-header{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.paper-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px}
 .paper-icon{font-size:1.8rem}
 .paper-name{font-size:1.05rem;font-weight:700;color:var(--text);line-height:1.4}
 .paper-journal{font-size:.8rem;color:var(--neon-purple);font-style:italic}
@@ -100,7 +91,6 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .paper-tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
 .paper-tag{padding:4px 12px;border-radius:10px;font-size:.75rem;background:rgba(180,0,255,.08);color:var(--neon-purple);border:1px solid rgba(180,0,255,.15)}
 .paper-project{padding:4px 12px;border-radius:10px;font-size:.75rem;background:rgba(0,245,255,.07);color:var(--neon-cyan);border:1px solid rgba(0,245,255,.15)}
-
 .timeline{position:relative;padding-left:60px;margin-top:48px;max-width:800px}
 .timeline::before{content:"";position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--neon-cyan),var(--neon-purple));border-radius:2px}
 .tl-item{margin-bottom:56px;position:relative;opacity:0;transform:translateX(-20px);transition:all .6s ease}
@@ -113,9 +103,8 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .tl-desc{color:var(--text-dim);font-size:.92rem;margin-bottom:16px;line-height:1.85}
 .tl-points{list-style:none}
 .tl-points li{color:var(--text-dim);font-size:.88rem;padding:5px 0 5px 20px;position:relative;line-height:1.75}
-.tl-points li::before{content:"→";position:absolute;left:0;color:var(--neon-purple);font-size:.9rem}
+.tl-points li::before{content:"\2192";position:absolute;left:0;color:var(--neon-purple);font-size:.9rem}
 .tl-points li strong{color:var(--text);font-weight:600}
-
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:48px}
 .tool-card{background:linear-gradient(135deg,rgba(17,17,24,.9),rgba(24,24,31,.9));border:1px solid rgba(0,245,255,.12);border-radius:22px;padding:34px;position:relative;overflow:hidden;transition:all .4s;opacity:0;transform:translateY(20px)}
 .tool-card.visible{opacity:1;transform:translateY(0)}
@@ -129,7 +118,6 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .tool-tag{padding:4px 12px;border-radius:12px;font-size:.75rem;background:rgba(0,245,255,.08);color:var(--neon-cyan);border:1px solid rgba(0,245,255,.15)}
 .tool-price{color:var(--text-dim);font-size:.82rem}
 .tool-price span{color:var(--neon-cyan);font-weight:600}
-
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;margin-top:48px}
 .project-card{background:linear-gradient(135deg,rgba(17,17,24,.95),rgba(24,24,31,.95));border:1px solid rgba(0,245,255,.1);border-radius:22px;padding:36px;position:relative;overflow:hidden;transition:all .4s;opacity:0;transform:translateY(20px)}
 .project-card.visible{opacity:1;transform:translateY(0)}
@@ -147,8 +135,7 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .result-tag.pink{background:rgba(255,0,110,.08);color:var(--neon-pink);border-color:rgba(255,0,110,.15)}
 .project-duties{list-style:none}
 .project-duties li{color:var(--text-dim);font-size:.85rem;padding:4px 0 4px 18px;position:relative;line-height:1.75}
-.project-duties li::before{content:"→";position:absolute;left:0;color:var(--neon-purple)}
-
+.project-duties li::before{content:"\2192";position:absolute;left:0;color:var(--neon-purple)}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:48px}
 .skill-cat{background:rgba(17,17,24,.6);border:1px solid rgba(0,245,255,.08);border-radius:22px;padding:32px;opacity:0;transform:translateY(20px);transition:all .6s ease}
 .skill-cat.visible{opacity:1;transform:translateY(0)}
@@ -161,7 +148,6 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .skill-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-purple));transition:width 1.8s cubic-bezier(.25,.46,.45,.94);width:0;position:relative}
 .skill-fill::after{content:"";position:absolute;right:0;top:0;bottom:0;width:25px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7));animation:shimmer 2s infinite}
 @keyframes shimmer{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
-
 .certs-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:48px;max-width:900px;margin-left:auto;margin-right:auto}
 .cert-badge{display:flex;align-items:center;gap:16px;padding:20px 30px;background:linear-gradient(135deg,rgba(180,0,255,.06),rgba(255,0,110,.06));border:1px solid rgba(180,0,255,.2);border-radius:18px;transition:all .4s;cursor:default;opacity:0;transform:scale(.9)}
 .cert-badge.visible{opacity:1;transform:scale(1)}
@@ -169,7 +155,6 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .cert-icon{font-size:1.8rem}
 .cert-text{font-size:.95rem;font-weight:600}
 .cert-sub{font-size:.78rem;color:var(--text-dim);margin-top:3px}
-
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:48px;max-width:800px;margin-left:auto;margin-right:auto}
 .contact-card{display:flex;align-items:center;gap:20px;padding:28px;background:rgba(17,17,24,.7);border:1px solid rgba(0,245,255,.1);border-radius:22px;transition:all .4s;text-decoration:none;color:var(--text);opacity:0;transform:translateY(20px)}
 .contact-card.visible{opacity:1;transform:translateY(0)}
@@ -177,21 +162,19 @@ section{padding:100px 40px;position:relative;z-index:2;max-width:1100px;margin:0
 .contact-icon{font-size:2.2rem;width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:rgba(0,245,255,.08);border-radius:16px;border:1px solid rgba(0,245,255,.15);flex-shrink:0}
 .contact-label{font-size:.72rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
 .contact-value{font-size:.95rem;font-weight:600}
-
 footer{padding:48px 40px;text-align:center;color:var(--text-dim);font-size:.82rem;position:relative;z-index:2;border-top:1px solid rgba(0,245,255,.08)}
 footer span{color:var(--neon-cyan)}
 .section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,245,255,.15),rgba(180,0,255,.15),transparent);margin:0 auto;position:relative;z-index:2;max-width:600px}
 .reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}.delay-4{transition-delay:.4s}.delay-5{transition-delay:.5s}
-
 @media(max-width:768px){
   nav{padding:14px 20px}.nav-links{display:none}
   section{padding:70px 20px}
   .hero{min-height:92vh}
   .about-card{padding:28px 22px}
   .edu-grid,.projects-grid,.tools-grid,.skills-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr);max-width:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
   .certs-grid{justify-content:flex-start}
   .timeline{padding-left:36px}
   .contact-grid{grid-template-columns:1fr}
@@ -217,109 +200,104 @@ footer span{color:var(--neon-cyan)}
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="hero" style="max-width:none">
+<section class="hero" id="hero">
   <div class="hero-badge"><span class="dot"></span> 蚂蚁集团 · AI项目管理专家</div>
   <h1>奚成朋</h1>
   <p class="hero-sub">AI 项目管理专家 · 专注数据治理与研发效能</p>
   <div class="typewriter" id="typewriter"></div>
   <div class="hero-btns">
-    <a href="#projects" class="btn-primary">🚀 探索项目</a>
-    <a href="#contact" class="btn-secondary">📬 联系我</a>
+    <a href="#projects" class="btn-primary">探索项目</a>
+    <a href="#contact" class="btn-secondary">联系我</a>
   </div>
-  <div class="scroll-hint"><span>Scroll</span><div style="width:1px;height:24px;background:linear-gradient(to bottom,var(--neon-cyan),transparent);margin-top:4px"></div></div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div style="width:1px;height:24px;background:linear-gradient(to bottom,var(--neon-cyan),transparent);margin-top:4px"></div>
+  </div>
 </section>
 
-<!-- STATS -->
 <section id="stats">
-  <div class="section-label">💡 数字成就</div>
-  <h2 class="section-title reveal">用<span class="acc">数据</span>驱动价值</h2>
+  <div class="section-label">数字成就</div>
+  <h2 class="section-title">用数据驱动价值</h2>
   <div class="stats-grid">
     <div class="stat-card delay-1">
-      <div class="stat-num"><span class="counter" data-target="5">0</span><span class="stat-unit">+</span></div>
-      <div class="stat-label">🎯 大型公司级项目</div>
+      <div class="stat-num">5+<span class="stat-unit"></span></div>
+      <div class="stat-label">大型公司级项目</div>
     </div>
     <div class="stat-card delay-2">
-      <div class="stat-num"><span class="counter" data-target="170">0</span><span class="stat-unit">+</span></div>
-      <div class="stat-label">📊 研效指标落地</div>
+      <div class="stat-num">170+<span class="stat-unit"></span></div>
+      <div class="stat-label">研效指标落地</div>
     </div>
     <div class="stat-card delay-3">
-      <div class="stat-num"><span class="counter" data-target="40">0</span><span class="stat-unit">%</span></div>
-      <div class="stat-label">💰 成本降低</div>
+      <div class="stat-num">40%<span class="stat-unit"></span></div>
+      <div class="stat-label">成本降低</div>
     </div>
     <div class="stat-card delay-4">
-      <div class="stat-num"><span class="counter" data-target="5">0</span><span class="stat-unit"></span></div>
-      <div class="stat-label">🏆 专业证书认证</div>
+      <div class="stat-num">5<span class="stat-unit"></span></div>
+      <div class="stat-label">专业证书认证</div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
-  <div class="section-label">👤 关于我</div>
-  <h2 class="section-title reveal">从地质学走向<span class="acc">AI时代</span>的跨界探索者</h2>
-  <div class="about-card reveal">
-    <p>我叫<span class="highlight">奚成朋</span>，从中国地质大学到南京大学，从地质勘探到AI项目管理，我用十年时间完成了一次看似不可能的跨界转型。我的故事，是关于如何用<span class="highlight">跨学科思维</span>在科技行业找到属于自己的独特位置。</p>
-    <p>本科阶段，我在<span class="highlight">中国地质大学（武汉）</span>系统学习了资源勘查工程专业，GPA达到3.8/4.0，专业排名前10%，连续获得校级一等奖学金并荣获优秀毕业生称号。这段经历培养了我<span class="highlight">严谨的数据思维、强大的逻辑分析能力，以及面对复杂问题时抽丝剥茧的系统性思考方式</span>。地质学教会我的不只是专业知识，更是一种"在不确定性中寻找规律"的能力，这种能力在我后来的AI数据工作中发挥了至关重要的作用。</p>
-    <p>硕士阶段，我进入<span class="highlight">南京大学</span>攻读地质工程（AI应用方向）硕士学位，主攻<span class="highlight">机器学习与数据挖掘</span>方向。期间，我深度学习了机器学习、数据挖掘、Python数据分析、深度学习、自然语言处理等核心课程，并将AI技术应用于地质研究，发表了2篇高质量学术论文，参与了国家自然科学基金项目《深层矿产资源智能评价系统》。这段学术训练，让我真正掌握了<span class="highlight">从数据中提取价值、构建智能化系统</span>的核心能力。</p>
-    <p>从腾讯技术工程事业群到网易互娱，再到蚂蚁集团，我的职业轨迹始终围绕<span class="highlight">AI数据治理与项目管理</span>这一核心主线。在腾讯TEG的三年里，我主导了AIdata/Qlabel平台迭代、AI数据安全联合项目（成本降低40%）、云度平台迁移（170+指标、20+看板）等公司级重点项目。在网易互娱，我接触了游戏行业技术工具体系与风控合规，拓宽了业务视野。</p>
-    <p>如今，我在<span class="highlight">蚂蚁集团</span>担任AI项目经理，主要负责<span class="highlight">支小宝AI生活管家与AQ健康管家</span>两大核心产品，以及<span class="highlight">国家级保密AI项目</span>。推动大模型准确率从60%提升至88%、医疗AI识别达行业领先水平。在蚂蚁，我正在书写职业生涯的新篇章。</p>
+  <div class="section-label">关于我</div>
+  <h2 class="section-title">从地质学到AI时代</h2>
+  <div class="about-card">
+    <p>我叫<span class="highlight">奚成朋</span>，从中国地质大学到南京大学，从地质勘探到AI项目管理，我用十年时间完成了一次跨界转型。本科阶段在<span class="highlight">中国地质大学（武汉）</span>系统学习资源勘查工程，GPA达到3.8/4.0，专业排名前10%，连续获得校级一等奖学金并荣获优秀毕业生称号。这段经历培养了我严谨的数据思维和面对复杂问题时抽丝剥茧的系统性思考方式。</p>
+    <p>硕士阶段进入<span class="highlight">南京大学</span>攻读地质工程（AI应用方向）硕士学位，主攻<span class="highlight">机器学习与深度学习的地球物理应用</span>方向。深度学习了机器学习、数据挖掘、Python数据分析、深度学习等核心课程，将全卷积神经网络技术应用于地震波信号处理，在这一交叉领域发表了学术论文并获得发明专利。这段学术训练让我真正掌握了从数据中提取价值、构建智能化系统的核心能力，并积累了将AI技术落地于实际工程场景的实战经验。</p>
+    <p>从腾讯技术工程事业群（TEG）到网易互娱，再到蚂蚁集团，我的职业轨迹始终围绕<span class="highlight">AI数据治理与项目管理</span>这一核心主线。在腾讯TEG的三年里积累了大型互联网企业项目管理体系实战经验，在网易互娱拓宽了业务视野，如今在<span class="highlight">蚂蚁集团</span>担任AI项目经理，主导支小宝AI生活管家、AQ健康管家两大核心产品，以及国家级保密AI项目，推动大模型准确率从60%提升至88%，医疗AI识别达行业领先水平。</p>
     <div class="tags">
-      <span class="tag">🎯 项目管理</span>
-      <span class="tag">🤖 AI数据</span>
-      <span class="tag">🔒 数据安全治理</span>
-      <span class="tag">📈 研发效能度量</span>
-      <span class="tag">🔄 跨部门协作</span>
-      <span class="tag">💡 产品迭代</span>
-      <span class="tag">⚡ 预算统筹</span>
-      <span class="tag">🏛️ 数据分级分类</span>
-      <span class="tag">🗃️ 数据平台建设</span>
-      <span class="tag">📊 指标体系设计</span>
-      <span class="tag">🏥 医疗AI</span>
-      <span class="tag">🧪 算法评测</span>
+      <span class="tag">项目管理</span>
+      <span class="tag">AI数据</span>
+      <span class="tag">数据安全治理</span>
+      <span class="tag">研发效能度量</span>
+      <span class="tag">跨部门协作</span>
+      <span class="tag">产品迭代</span>
+      <span class="tag">预算统筹</span>
+      <span class="tag">数据分级分类</span>
+      <span class="tag">数据平台建设</span>
+      <span class="tag">医疗AI</span>
+      <span class="tag">算法评测</span>
+      <span class="tag">深度学习</span>
     </div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- EDUCATION -->
 <section id="education">
-  <div class="section-label">🎓 教育背景</div>
-  <h2 class="section-title reveal">学术积淀与<span class="acc">AI融合</span>之路</h2>
-  <p class="section-desc reveal">从地质学到人工智能，我的学术历程是一段跨学科的深度探索，将地球科学的系统性思维与人工智能的数据驱动方法有机融合，形成了独特的技术视野。</p>
-
+  <div class="section-label">教育背景</div>
+  <h2 class="section-title">学术积淀与AI融合之路</h2>
+  <p class="section-desc">从地质学到人工智能，将地球科学的系统性思维与人工智能的数据驱动方法有机融合。</p>
   <div class="edu-grid">
     <div class="edu-card delay-1">
-      <span class="edu-icon">🎓</span>
+      <span class="edu-icon">&#127891;</span>
       <div class="edu-degree">硕士学位</div>
       <div class="edu-school">南京大学（Nanjing University）</div>
       <div class="edu-major">地质工程 · AI应用方向</div>
       <div class="edu-years">2018 — 2021</div>
-      <p class="edu-note">南京大学是国家"双一流"建设高校，地质资源与地质工程学科排名全国前列。在南大读研期间，我系统学习了人工智能与数据科学的核心方法，并将机器学习技术应用于地质工程领域，走出了一条跨学科融合的独特道路。</p>
+      <p class="edu-note">南京大学是国家"双一流"建设高校，地质资源与地质工程学科排名全国前列。主攻机器学习与深度学习的地球物理应用方向。</p>
       <div class="edu-courses">
         <div class="paper-title">核心课程</div>
-        <div class="edu-course">机器学习（Machine Learning）</div>
-        <div class="edu-course">数据挖掘（Data Mining）</div>
-        <div class="edu-course">Python数据分析与可视化</div>
-        <div class="edu-course">深度学习与神经网络</div>
-        <div class="edu-course">自然语言处理（NLP）</div>
+        <div class="edu-course">机器学习</div>
+        <div class="edu-course">数据挖掘</div>
+        <div class="edu-course">Python数据分析</div>
+        <div class="edu-course">深度学习</div>
         <div class="edu-course">统计学与概率论</div>
         <div class="edu-course">地理信息系统（GIS）应用</div>
       </div>
       <div class="edu-awards">
         <span class="edu-award">AI应用方向</span>
-        <span class="edu-award">数据挖掘</span>
-        <span class="edu-award">机器学习</span>
+        <span class="edu-award">深度学习</span>
+        <span class="edu-award">地球物理</span>
       </div>
     </div>
     <div class="edu-card delay-2">
-      <span class="edu-icon">📚</span>
+      <span class="edu-icon">&#128218;</span>
       <div class="edu-degree">学士学位</div>
       <div class="edu-school">中国地质大学（武汉）</div>
       <div class="edu-major">资源勘查工程</div>
       <div class="edu-years">2013 — 2017</div>
-      <p class="edu-note">中国地质大学（武汉）是教育部直属全国重点大学，资源勘查工程专业为国家特色专业。在地大四年，我建立了扎实的地质学理论体系，培养了系统性问题分析能力和严谨的科学素养。</p>
+      <p class="edu-note">中国地质大学（武汉）是教育部直属全国重点大学，资源勘查工程专业为国家特色专业。GPA 3.8/4.0，专业排名前10%。</p>
       <div class="edu-courses">
         <div class="paper-title">核心课程</div>
         <div class="edu-course">勘查地球化学</div>
@@ -328,33 +306,27 @@ footer span{color:var(--neon-cyan)}
         <div class="edu-course">数值分析与建模</div>
         <div class="edu-course">矿产勘查学</div>
         <div class="edu-course">构造地质学</div>
-        <div class="edu-course">岩石学与矿物学</div>
       </div>
       <div class="edu-awards">
         <span class="edu-award">GPA 3.8/4.0</span>
-        <span class="edu-award">专业前10%</span>
         <span class="edu-award">一等奖学金</span>
         <span class="edu-award">优秀毕业生</span>
       </div>
     </div>
   </div>
 
-  
   <div class="papers-container">
-    <div class="paper-title reveal">📄 学术成果</div>
+    <div class="paper-title">学术成果</div>
     <div class="paper-card delay-1">
       <div class="paper-header">
-        <span class="paper-icon">📄</span>
+        <span class="paper-icon">&#128196;</span>
         <div>
           <div class="paper-name">《基于全卷积神经网络拾取地震波时间窗口的研究》</div>
           <div class="paper-journal">南京大学 · 硕士电子期刊 · 2022年（第05期）</div>
         </div>
       </div>
       <div class="paper-abstract">
-        <strong>研究背景：</strong>利用地震波形资料反演地球内部结构是地震学成像领域最先进的反演方法之一，但传统时窗拾取方法已不能满足海量数据反演时的效率要求。<br><br>
-        <strong>研究方法：</strong>采用全卷积神经网络自动拾取复杂地震波信号，从实际勘探地震数据中选取37960条波形样本，每个样本重采样为4992个点。搭建36个卷积层（含7个降采样和7个上采样部分），经1000次迭代训练后达到较好识别效果。<br><br>
-        <strong>核心成果：</strong>预测每条地震记录约需10<sup>-5</sup>秒，相比传统方法（STA/LTA）快约<strong>10000倍</strong>，为百万级勘探地震数据的时间窗口选取提供高效技术支撑。<br><br>
-        <strong>DOI：</strong>10.27235/d.cnki.gnjiu.2021.001662
+        <strong>研究背景：</strong>利用地震波形资料反演地球内部结构是地震学成像领域最先进的反演方法之一，但传统时窗拾取方法已不能满足海量数据反演时的效率要求。<br><br><strong>研究方法：</strong>采用全卷积神经网络自动拾取复杂地震波信号，从实际勘探地震数据中选取37960条波形样本，搭建36个卷积层，经1000次迭代训练后达到较高识别效果。<br><br><strong>核心成果：</strong>预测每条地震记录约需10<sup>-5</sup>秒，相比传统方法（STA/LTA）快约<strong>10000倍</strong>，为百万级勘探地震数据的时间窗口选取提供高效技术支撑。<br><br><strong>DOI：</strong>10.27235/d.cnki.gnjiu.2021.001662
       </div>
       <div class="paper-tags">
         <span class="paper-tag">全卷积神经网络</span>
@@ -365,16 +337,14 @@ footer span{color:var(--neon-cyan)}
     </div>
     <div class="paper-card delay-2">
       <div class="paper-header">
-        <span class="paper-icon">🏛️</span>
+        <span class="paper-icon">&#127968;</span>
         <div>
           <div class="paper-name">《基于全卷积神经网络的地震波形时间窗口拾取》</div>
           <div class="paper-journal">SPG/SEG南京2020年国际地球物理会议 · 2020年9月</div>
         </div>
       </div>
       <div class="paper-abstract">
-        <strong>会议：</strong>SPG/SEG南京2020年国际地球物理会议（联合主办：地球物理学会SEG与中国石油学会SPG）<br><br>
-        <strong>核心成果：</strong>提出基于全卷积神经网络的地震波形时间窗口自动拾取方法，预测百万级地震数据样本仅需数十秒完成，相比传统方法提升效率约10000倍，为全波形反演中的时间窗口选取提供更高效的技术支撑。<br><br>
-        <strong>DOI：</strong>10.26914/c.cnkihy.2020.014981
+        <strong>会议：</strong>SPG/SEG南京2020年国际地球物理会议（联合主办：地球物理学会SEG与中国石油学会SPG）<br><br><strong>核心成果：</strong>提出基于全卷积神经网络的地震波形时间窗口自动拾取方法，预测百万级地震数据样本仅需数十秒完成，相比传统方法提升效率约10000倍。<br><br><strong>DOI：</strong>10.26914/c.cnkihy.2020.014981
       </div>
       <div class="paper-tags">
         <span class="paper-tag">国际会议</span>
@@ -385,17 +355,14 @@ footer span{color:var(--neon-cyan)}
     </div>
     <div class="paper-card delay-3">
       <div class="paper-header">
-        <span class="paper-icon">🔬</span>
+        <span class="paper-icon">&#128737;</span>
         <div>
           <div class="paper-name">《一种基于全卷积神经网络的震相特征识别波形反演方法》</div>
           <div class="paper-journal">发明授权专利 · 专利号：CN202010566725.2 · 2023年授权</div>
         </div>
       </div>
       <div class="paper-abstract">
-        <strong>发明人：</strong>阮友谊、江文彬、<strong>奚成朋</strong>、王文闯<br>
-        <strong>专利权人：</strong>南京大学；中国石油集团东方地球物理勘探有限责任公司<br><br>
-        <strong>技术方案：</strong>利用全卷积神经网络对地震波形数据进行震相特征识别与时间窗口划分，结合传统震相筛选方法（FLEXWIN）构建训练集，通过理论与观测数据的振幅比、互相关系数和走时差三重校验筛选有效波形进行反演，有效改善周期跳跃问题，提高波形反演的收敛速度。<br><br>
-        <strong>应用价值：</strong>解决波形反演中的时间窗口高效拾取问题，为地震勘探全波形反演提供智能化技术支撑。
+        <strong>发明人：</strong>阮友谊、江文彬、<strong>奚成朋</strong>、王文闯<br><br><strong>专利权人：</strong>南京大学；中国石油集团东方地球物理勘探有限责任公司<br><br><strong>技术方案：</strong>利用全卷积神经网络对地震波形数据进行震相特征识别与时间窗口划分，结合传统震相筛选方法（FLEXWIN）构建训练集，通过理论与观测数据的振幅比、互相关系数和走时差三重校验筛选有效波形进行反演，有效改善周期跳跃问题，提高波形反演收敛速度。<br><br><strong>应用价值：</strong>解决波形反演中的时间窗口高效拾取问题，为地震勘探全波形反演提供智能化技术支撑。
       </div>
       <div class="paper-tags">
         <span class="paper-project">发明专利</span>
@@ -409,62 +376,53 @@ footer span{color:var(--neon-cyan)}
 
 <div class="section-divider"></div>
 
-<!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-label">💼 工作经历</div>
-  <h2 class="section-title reveal">深耕<span class="acc">AI项目管理</span>，推动数据价值落地</h2>
-
+  <div class="section-label">工作经历</div>
+  <h2 class="section-title">深耕AI项目管理，推动数据价值落地</h2>
   <div class="timeline">
-    <!-- 蚂蚁集团（当前） -->
     <div class="tl-item">
-      <div class="tl-company">🏢 蚂蚁集团</div>
+      <div class="tl-company">蚂蚁集团</div>
       <div class="tl-role">AI项目经理 / AI业务项目经理</div>
       <div class="tl-period">2024.11 — 至今</div>
-      <p class="tl-desc">加入蚂蚁集团后，我担任AI项目经理/AI业务项目经理，主要负责"支小宝"AI生活管家与AI健康管家（AQ产品）两大核心AI业务的<span class="highlight">产品迭代管理、算法评测体系建设、医疗AI专项项目管理</span>等工作，同时担任<span class="highlight">国家级保密AI项目PM负责人</span>。在这里，我将腾讯积累的AI数据管理与项目管理方法论应用于金融医疗场景，取得了显著成效。</p>
+      <p class="tl-desc">担任AI项目经理/AI业务项目经理，主要负责"支小宝"AI生活管家与AI健康管家（AQ产品）两大核心AI业务的<span class="highlight">产品迭代管理、算法评测体系建设、医疗AI专项项目管理</span>等工作，同时担任<span class="highlight">国家级保密AI项目PM负责人</span>。</p>
       <ul class="tl-points">
         <li><strong>支小宝"生活管家"核心PM：</strong>全面负责支付宝AI生活管家产品算法优化迭代管理、评测机制建立、benchmark体系从0-1搭建及badcase全流程优化。牵头搭建覆盖百科知识、逻辑推理、语言能力、常识判断、情感推理五大维度的评测数据集；将大模型评测频率从"一周1次"提升至"一天1次"，推动支小宝大模型核心能力准确率从60%提升至88%。</li>
-        <li><strong>AI健康管家（AQ）核心PM：</strong>主导医疗大模型全生命周期管理与18项AI能力上线，覆盖AI诊室、主bot问答、挂号、云陪诊、数字家庭医生智能体等高频场景，核心服务响应时效提升25%，用户医疗需求解决率达90%；牵头皮肤疾病识别、性病识别等医疗AI专项，实现皮肤疾病识别准确率90%+，达行业领先水平；医疗数据采集标注效率提升30%+，累计节省数据成本500万+。</li>
-        <li><strong>国家级保密AI项目PM负责人：</strong>主导组建3人专业化PM团队，创新构建"目标对齐-过程追踪-风险预警"全周期管理机制，搭建"验收标准-绩效指标-任务清单"三级映射体系，构建"内部技术初审+第三方合规复审"双审机制。项目全程零安全事故，100%通过国家验收标准，团队成员关键节点交付准时率100%。</li>
-        <li><strong>自动化评测体系建设：</strong>主导医疗AI自动化评测体系建设，实现"数据输入-自动化评测-智能分析-报告生成"全链路闭环，单日评测效率提升超3倍；建立BadCase智能追踪与协同优化机制，推动AI能力迭代周期缩短10%+，核心场景模型准确率迭代效率提升30%。</li>
+        <li><strong>AQ健康管家核心PM：</strong>主导医疗大模型全生命周期管理与18项AI能力上线，核心服务响应时效提升25%，用户医疗需求解决率达90%；牵头皮肤疾病识别等医疗AI专项，实现皮肤疾病识别准确率90%+，达行业领先水平；医疗数据采集标注效率提升30%+，累计节省数据成本500万+。</li>
+        <li><strong>国家级保密AI项目PM负责人：</strong>主导组建3人专业化PM团队，创新构建"目标对齐-过程追踪-风险预警"全周期管理机制。项目全程零安全事故，100%通过国家验收标准，关键节点交付准时率100%。</li>
+        <li><strong>自动化评测体系建设：</strong>主导医疗AI自动化评测体系建设，实现"数据输入-自动化评测-智能分析-报告生成"全链路闭环，单日评测效率提升超3倍；AI能力迭代周期缩短10%+，核心场景模型准确率迭代效率提升30%。</li>
       </ul>
     </div>
-
-    <!-- 网易互娱 -->
     <div class="tl-item">
-      <div class="tl-company">🏢 网易互娱</div>
+      <div class="tl-company">网易互娱</div>
       <div class="tl-role">高级项目管理工程师</div>
       <div class="tl-period">2024.08 — 2024.11</div>
-      <p class="tl-desc">离开腾讯后，我加入了网易互娱担任高级项目管理工程师，全面负责技术中心30+款技术工具的端到端管理，以及千里眼、健康度、SOP体系搭建、盗刷治理等公司级核心项目。这段经历让我对<span class="highlight">游戏行业技术工具体系、运营数据分析、风控合规</span>等领域有了深入理解，项目管理能力在多元业务场景中得到进一步锤炼。</p>
+      <p class="tl-desc">全面负责技术中心30+款技术工具的端到端管理，以及千里眼、健康度、SOP体系搭建、盗刷治理等公司级核心项目，对<span class="highlight">游戏行业技术工具体系、运营数据分析、风控合规</span>等领域有深入理解。</p>
       <ul class="tl-points">
-        <li><strong>技术中心30+工具全生命周期管理：</strong>构建"问题跟进-版本迭代-会议协同"闭环管理体系，建立P0-P2分级响应机制，日均处理200余条故障与需求，故障解决时效提升30%；统筹20余个工具版本按期上线，用户满意度达9.3分（满分10分）。</li>
-        <li><strong>公司级重点项目统筹：</strong>牵头千里眼（业务风险实时预警）、健康度（多维评估模型，输出报告10余份）、SOP体系搭建（3个核心流程标准化）、盗刷治理（识别算法优化，发生率下降25%，减少损失500万元）等公司级核心项目，各项目100%达成预期目标。</li>
+        <li><strong>技术中心30+工具全生命周期管理：</strong>构建"问题跟进-版本迭代-会议协同"闭环体系，日均处理200余条故障与需求，故障解决时效提升30%；统筹20余个工具版本按期上线，用户满意度达9.3分（满分10分）。</li>
+        <li><strong>公司级重点项目统筹：</strong>牵头千里眼（业务风险实时预警）、健康度（多维评估模型）、SOP体系搭建（3个核心流程标准化）、盗刷治理（识别算法优化，发生率下降25%，减少损失500万元）等公司级核心项目，各项目100%达成预期目标。</li>
       </ul>
     </div>
-
-    <!-- 腾讯WXG -->
     <div class="tl-item">
-      <div class="tl-company">🏢 腾讯计算机系统有限公司</div>
-      <div class="tl-role">技术工程事业群（TEG），管理微信事业群项目</div>
+      <div class="tl-company">腾讯科技（深圳）有限公司</div>
+      <div class="tl-role">综合项目管理 · 微信事业群（WXG）</div>
       <div class="tl-period">2021.06 — 2024.08</div>
-      <p class="tl-desc">在腾讯技术工程事业群（TEG）的三年间，是职业生涯中成长最快的阶段。WXG作为腾讯核心事业群，承担微信这一超级产品的持续创新与生态建设使命。我深度参与AI数据基础设施建设，积累了<span class="highlight">大型互联网企业项目管理体系实战经验</span>。</p>
+      <p class="tl-desc">作为腾讯技术工程事业群（TEG）核心PM，负责微信事业群（WXG）等核心业务线的项目管理工作，深度参与AI数据基础设施建设，积累了<span class="highlight">大型互联网企业项目管理体系实战经验</span>。</p>
       <ul class="tl-points">
         <li><strong>WXG研发预算PM：</strong>主导年度研发费预算编制与审核，建立"项目价值-投入-产出"三维评估模型，推动年度预算利用率提升40%，避免无效投入1500万。</li>
         <li><strong>WXG AI数据需求PM：</strong>统筹多部门AI数据需求全生命周期，建立"采集-标注-验收-交付"闭环管控链路，20余项核心数据需求100%按时交付，数据质量达标率90%+。</li>
         <li><strong>AI数据安全联合项目PM：</strong>搭建数据全流程安全域，实现30+AI业务场景数据安全保障，数据安全事件发生率下降100%（零事故），通过6项行业安全合规认证。</li>
-        <li><strong>AIdata/Qlabel平台PM：</strong>负责需求管理、迭代跟进、缺陷管理，推动平台缺陷率下降30%，迭代交付效率提升20%。</li>
-        <li><strong>研发效能度量PM：</strong>独立主导云度平台迁移（170+指标、20+看板），完成研效数据元数据安全治理，推动研发质量问题识别效率提升15%。</li>
+        <li><strong>AIdata/Qlabel平台PM：</strong>推动平台缺陷率下降30%，迭代交付效率提升20%。</li>
+        <li><strong>研发效能度量PM：</strong>独立主导云度平台迁移（170+指标、20+看板），推动研发质量问题识别效率提升15%。</li>
       </ul>
     </div>
-
-    <!-- 腾讯CSIG实习 -->
     <div class="tl-item">
-      <div class="tl-company">🏢 腾讯科技（深圳）有限公司</div>
+      <div class="tl-company">腾讯科技（深圳）有限公司</div>
       <div class="tl-role">云计算产品经理（项目管理）实习 · CSIG</div>
       <div class="tl-period">2020.05 — 2021.02</div>
-      <p class="tl-desc">研究生最后一年，我进入腾讯云与智慧产业事业群（CSIG）实习，这是我从学术研究走向工业界的第一次重要尝试。在CSIG的近一年实习中，我系统了解了大型互联网企业的产品研发流程、云计算产品的市场逻辑，以及如何将AI技术产品化、服务化的完整路径。</p>
+      <p class="tl-desc">研究生最后一年在腾讯云与智慧产业事业群（CSIG）实习，系统了解大型互联网企业的产品研发流程和云计算产品的市场逻辑。</p>
       <ul class="tl-points">
-        <li>主导CSIG研发预算统筹与审核工作，搭建"部门申报-合规校验-价值评估-额度核定"四阶管理流程，推动预算资源向高价值项目倾斜，助力CSIG年度研发投入ROI提升23%。</li>
-        <li>牵头AI数据安全专项项目，建立覆盖技术防护、流程管控、人员权责的三维安全方案，实现AI数据安全事件发生率下降100%，顺利通过6项行业安全合规认证，支撑50+核心AI业务安全上线。</li>
+        <li>主导CSIG研发预算统筹与审核，搭建"部门申报-合规校验-价值评估-额度核定"四阶管理流程，推动CSIG年度研发投入ROI提升23%，累计审核28份预算申请材料，剔除不合理申请6项。</li>
+        <li>牵头AI数据安全专项，建立覆盖技术防护、流程管控、人员权责的三维安全方案，实现AI数据安全事件发生率下降100%，通过6项行业安全合规认证，支撑50+核心AI业务安全上线。</li>
       </ul>
     </div>
   </div>
@@ -472,65 +430,44 @@ footer span{color:var(--neon-cyan)}
 
 <div class="section-divider"></div>
 
-<!-- TOOLS -->
 <section id="tools">
-  <div class="section-label">🛠️ AI项目管理工具箱</div>
-  <h2 class="section-title reveal">高效<span class="acc">项目管理</span>的利器</h2>
-  <p class="section-desc reveal">以下是我在日常项目管理工作中高频使用的核心工具，覆盖需求管理、协作沟通、效能度量等全场景。</p>
+  <div class="section-label">AI项目管理工具箱</div>
+  <h2 class="section-title">高效项目管理的利器</h2>
+  <p class="section-desc">日常高频使用的核心工具，覆盖需求管理、协作沟通、效能度量等全场景。</p>
   <div class="tools-grid">
     <div class="tool-card delay-1">
-      <span class="tool-icon">📓</span>
+      <span class="tool-icon">&#128221;</span>
       <div class="tool-name">Notion</div>
-      <div class="tool-desc">全能笔记与项目管理工具，支持协作文档、数据库、任务看板。AI助手可自动总结会议纪要、生成任务清单，是PM和团队协作的效率神器。</div>
-      <div class="tool-tags">
-        <span class="tool-tag">笔记</span>
-        <span class="tool-tag">任务管理</span>
-        <span class="tool-tag">协作</span>
-      </div>
+      <div class="tool-desc">全能笔记与项目管理工具，支持协作文档、数据库、任务看板。AI助手可自动总结会议纪要、生成任务清单。</div>
+      <div class="tool-tags"><span class="tool-tag">笔记</span><span class="tool-tag">任务管理</span><span class="tool-tag">协作</span></div>
       <div class="tool-price">免费 · 付费</div>
     </div>
     <div class="tool-card delay-2">
-      <span class="tool-icon">🏢</span>
+      <span class="tool-icon">&#128693;</span>
       <div class="tool-name">飞书（Lark）</div>
-      <div class="tool-desc">字节跳动出品的一站式办公平台，集成IM、视频会议、在线文档、项目管理。支持AI助手嵌入，提供智能会议纪要、任务拆解等功能。</div>
-      <div class="tool-tags">
-        <span class="tool-tag">项目管理</span>
-        <span class="tool-tag">即时通讯</span>
-        <span class="tool-tag">文档协作</span>
-      </div>
+      <div class="tool-desc">字节跳动出品的一站式办公平台，集成IM、视频会议、在线文档、项目管理。支持AI助手嵌入，提供智能会议纪要、任务拆解。</div>
+      <div class="tool-tags"><span class="tool-tag">项目管理</span><span class="tool-tag">即时通讯</span><span class="tool-tag">文档协作</span></div>
       <div class="tool-price">免费</div>
     </div>
     <div class="tool-card delay-3">
-      <span class="tool-icon">⚡</span>
+      <span class="tool-icon">&#9889;</span>
       <div class="tool-name">Linear</div>
-      <div class="tool-desc">专为开发者设计的敏捷项目管理工具，界面简洁优雅。与GitHub深度集成，支持Issue跟踪、Sprint规划、路线图管理。AI功能可自动生成Issue描述。</div>
-      <div class="tool-tags">
-        <span class="tool-tag">敏捷管理</span>
-        <span class="tool-tag">GitHub集成</span>
-        <span class="tool-tag">任务跟踪</span>
-      </div>
+      <div class="tool-desc">专为开发者设计的敏捷项目管理工具，界面简洁优雅。与GitHub深度集成，支持Issue跟踪、Sprint规划、路线图管理。</div>
+      <div class="tool-tags"><span class="tool-tag">敏捷管理</span><span class="tool-tag">GitHub集成</span><span class="tool-tag">任务跟踪</span></div>
       <div class="tool-price">免费 · 付费</div>
     </div>
     <div class="tool-card delay-4">
-      <span class="tool-icon">🗺️</span>
+      <span class="tool-icon">&#128444;</span>
       <div class="tool-name">Miro</div>
-      <div class="tool-desc">在线白板与协作工具，支持头脑风暴、流程图、用户故事地图等。AI功能可自动将白板内容整理为结构化文档，是远程团队协作的首选。</div>
-      <div class="tool-tags">
-        <span class="tool-tag">协作白板</span>
-        <span class="tool-tag">思维导图</span>
-        <span class="tool-tag">远程会议</span>
-      </div>
+      <div class="tool-desc">在线白板与协作工具，支持头脑风暴、流程图、用户故事地图等。AI功能可自动将白板内容整理为结构化文档。</div>
+      <div class="tool-tags"><span class="tool-tag">协作白板</span><span class="tool-tag">思维导图</span><span class="tool-tag">远程会议</span></div>
       <div class="tool-price">免费 · 付费</div>
     </div>
     <div class="tool-card delay-5">
-      <span class="tool-icon">🐙</span>
+      <span class="tool-icon">&#128024;</span>
       <div class="tool-name">GitHub Projects</div>
-      <div class="tool-desc">GitHub官方的项目管理工作区，支持看板和表格两种视图。与代码仓库、PR、Issue深度绑定。AI辅助可自动分类Issue、预测工时、生成项目报告。</div>
-      <div class="tool-tags">
-        <span class="tool-tag">代码管理</span>
-        <span class="tool-tag">敏捷看板</span>
-        <span class="tool-tag">DevOps</span>
-      </div>
+      <div class="tool-desc">GitHub官方的项目管理工作区，支持看板和表格两种视图。与代码仓库、PR、Issue深度绑定。</div>
+      <div class="tool-tags"><span class="tool-tag">代码管理</span><span class="tool-tag">敏捷看板</span><span class="tool-tag">DevOps</span></div>
       <div class="tool-price">免费</div>
     </div>
   </div>
@@ -538,30 +475,28 @@ footer span{color:var(--neon-cyan)}
 
 <div class="section-divider"></div>
 
-<!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">🚀 主导项目</div>
-  <h2 class="section-title reveal">从需求到<span class="acc">交付</span>的全链路项目把控</h2>
-  <p class="section-desc reveal">以下五个项目是我在腾讯期间主导或深度参与的核心项目，涵盖AI数据安全治理、研发效能提升、数据平台建设、开源协同等关键领域，每一个项目都经历了从0到1或从1到N的完整建设过程。</p>
+  <div class="section-label">主导项目</div>
+  <h2 class="section-title">从需求到交付的全链路把控</h2>
+  <p class="section-desc">涵盖AI数据安全治理、研发效能提升、数据平台建设、开源协同等关键领域。</p>
   <div class="projects-grid">
     <div class="project-card delay-1">
       <div class="project-header">
         <div class="project-num">01</div>
         <div class="project-year">2022 — 至今</div>
       </div>
-      <div class="project-name">🛡️ AI数据安全与数据治理联合项目</div>
-      <div class="project-desc">这是我在微信事业群主导的最具战略意义的跨部门联合项目。项目旨在为微信事业群的AI数据全生命周期建立一套完整的安全管控体系，涵盖数据分级分类标准的制定、安全域的设计与划分、数据访问权限的精细化管理、数据流转全链路审计等核心模块。</div>
+      <div class="project-name">AI数据安全与数据治理联合项目</div>
+      <div class="project-desc">为微信事业群AI数据全生命周期建立完整安全管控体系，涵盖数据分级分类、安全域设计、数据访问权限精细化管理、数据流转全链路审计等核心模块。</div>
       <div class="project-results">
         <span class="result-tag purple">分级分类管理</span>
         <span class="result-tag">成本降低40%</span>
         <span class="result-tag pink">零安全事故</span>
-        <span class="result-tag purple">跨40+人团队</span>
+        <span class="result-tag purple">30+业务场景</span>
       </div>
       <ul class="project-duties">
-        <li>主导制定AI数据分级分类标准，建立L1-L4四级敏感等级体系，覆盖1000+数据维度</li>
-        <li>设计并推动数据安全域方案落地，实现不同安全等级数据的物理隔离与逻辑隔离</li>
-        <li>统筹建立数据访问权限申请-审批-执行-审计全流程机制，权限审批时效提升70%</li>
-        <li>推动数据安全事故零发生，安全合规通过率100%</li>
+        <li>建立L1-L4四级敏感等级体系，覆盖1000+数据维度</li>
+        <li>推动数据安全域方案落地，实现物理隔离与逻辑隔离</li>
+        <li>权限审批时效提升70%，安全合规通过率100%</li>
       </ul>
     </div>
     <div class="project-card delay-2">
@@ -569,8 +504,8 @@ footer span{color:var(--neon-cyan)}
         <div class="project-num">02</div>
         <div class="project-year">2023 — 至今</div>
       </div>
-      <div class="project-name">📊 研发效能度量平台迁移项目</div>
-      <div class="project-desc">微信事业群原有的云度研发效能度量平台因底层架构老化需整体迁移至新一代技术平台。项目涉及170+核心研发指标的全量迁移，以及20+数据看板的重新设计与验证。独立完成从技术方案设计、指标映射、数据校验到最终上线的全流程，实现零数据丢失、业务零中断。</div>
+      <div class="project-name">研发效能度量平台迁移项目</div>
+      <div class="project-desc">独立主导云度平台（CSIG研效度量平台）迁移项目，完成170+核心指标与20+业务看板的迁移落地，保障研效数据无缝衔接。</div>
       <div class="project-results">
         <span class="result-tag purple">170+ 核心指标</span>
         <span class="result-tag">20+ 数据看板</span>
@@ -578,10 +513,9 @@ footer span{color:var(--neon-cyan)}
         <span class="result-tag purple">独立完成</span>
       </div>
       <ul class="project-duties">
-        <li>独立完成云度平台迁移技术方案设计，制定详细的指标映射规则与数据校验SOP</li>
-        <li>梳理170+指标的统计口径变更，确保新旧平台数据一致性（误差率控制在0.1%以内）</li>
-        <li>重新设计20+数据看板的布局与交互，优化关键指标的可视化呈现</li>
-        <li>主导全量回归测试与灰度发布，迁移过程实现零数据丢失、业务零中断</li>
+        <li>制定详细的指标映射规则与数据校验SOP</li>
+        <li>确保新旧平台数据一致性（误差率控制在0.1%以内）</li>
+        <li>迁移过程实现零数据丢失、业务零中断</li>
       </ul>
     </div>
     <div class="project-card delay-3">
@@ -589,39 +523,37 @@ footer span{color:var(--neon-cyan)}
         <div class="project-num">03</div>
         <div class="project-year">2021 — 2023</div>
       </div>
-      <div class="project-name">📋 AIdata 需求管理平台产品迭代</div>
-      <div class="project-desc">AIdata是微信事业群公司级的AI数据标注与管理平台，为各业务线提供数据采集、标注、质量管理、数据交付等一站式服务。作为产品需求管理负责人，我深度参与平台从1.0到3.0的多次重大迭代，平台累计处理AI数据需求超过5000单，服务内部团队30+，日均处理数据量达到TB级别。</div>
+      <div class="project-name">AIdata 需求管理平台产品迭代</div>
+      <div class="project-desc">WXG公司级AI数据标注与管理平台，为各业务线提供数据采集、标注、质量管理、数据交付一站式服务。累计处理AI数据需求超过5000单，服务内部团队30+。</div>
       <div class="project-results">
         <span class="result-tag purple">公司级平台</span>
         <span class="result-tag">5000+ 需求单</span>
         <span class="result-tag pink">30+ 服务团队</span>
-        <span class="result-tag purple">TB级日处理</span>
+        <span class="result-tag purple">SLA 97%</span>
       </div>
       <ul class="project-duties">
-        <li>主导AIdata平台需求调研与分析，独立编写PRD文档超过20份，功能覆盖率提升至92%</li>
-        <li>建立标准化的需求评审流程，推动需求响应时效提升60%</li>
-        <li>制定标注质量评分标准，建立质量预警与改进机制，推动平台SLA从85%提升至97%</li>
-        <li>协调标注、质检、技术三方协作，建立高效的需求流转机制</li>
+        <li>主导AIdata平台需求调研与分析，编写PRD超过20份</li>
+        <li>推动平台SLA从85%提升至97%</li>
+        <li>建立标注质量评分标准与质量预警机制</li>
       </ul>
     </div>
     <div class="project-card delay-4">
       <div class="project-header">
         <div class="project-num">04</div>
-        <div class="project-year">2021 — 2023</div>
+        <div class="project-year">2024.11 — 至今</div>
       </div>
-      <div class="project-name">🔬 AI评测开源协同项目</div>
-      <div class="project-desc">微信事业群最具技术影响力的开源协同项目之一，旨在为集团各业务线的AI模型评测建立统一的标准、数据集和评测框架。作为PMC核心成员，统筹协调来自5个不同团队的50+开源贡献者，完成评测数据集建设、接口规范制定、评测报告模板设计等核心工作。GitHub Star数超过2000。</div>
+      <div class="project-name">国家级保密AI项目</div>
+      <div class="project-desc">担任国家级保密AI项目PM负责人，主导组建3人专业化PM团队，创新构建"目标对齐-过程追踪-风险预警"全周期管理机制，严格恪守国家保密规范与进度要求。</div>
       <div class="project-results">
-        <span class="result-tag purple">PMC 开源项目</span>
-        <span class="result-tag">50+ 贡献者</span>
-        <span class="result-tag pink">GitHub 2000+ Stars</span>
-        <span class="result-tag purple">5个团队协同</span>
+        <span class="result-tag purple">PM负责人</span>
+        <span class="result-tag">零安全事故</span>
+        <span class="result-tag pink">100%通过验收</span>
+        <span class="result-tag purple">准时率100%</span>
       </div>
       <ul class="project-duties">
-        <li>制定AI评测数据集建设标准与标注规范，统一评测数据格式与质量要求</li>
-        <li>设计评测接口规范（API Specification）和评测报告模板，实现评测结果可比性</li>
-        <li>统筹开源社区运营与贡献者管理，建立PR评审机制，保障代码与数据质量</li>
-        <li>组织季度线上评测挑战赛，推动内部评测结果与外部公开基准对齐</li>
+        <li>搭建"验收标准-绩效指标-任务清单"三级映射体系</li>
+        <li>构建"内部技术初审+第三方合规复审"双审机制</li>
+        <li>主导编制《项目验收标准拆解手册》</li>
       </ul>
     </div>
     <div class="project-card delay-5">
@@ -629,8 +561,8 @@ footer span{color:var(--neon-cyan)}
         <div class="project-num">05</div>
         <div class="project-year">2021</div>
       </div>
-      <div class="project-name">📈 广告多媒体数据特征工程</div>
-      <div class="project-desc">这是我从学术研究向工业实践转型的第一个正式项目。运用硕士期间积累的机器学习与数据挖掘经验，主导设计并落地端到端的多媒体特征提取与工程化处理流程，为广告推荐系统提供高质量特征输入。项目涉及图像、视频、文本等多模态数据，与推荐算法团队紧密协作。</div>
+      <div class="project-name">广告多媒体数据特征工程</div>
+      <div class="project-desc">主导设计并落地端到端的多媒体特征提取与工程化处理流程，为广告推荐系统提供高质量特征输入，与推荐算法团队紧密协作。</div>
       <div class="project-results">
         <span class="result-tag purple">ML 特征工程</span>
         <span class="result-tag">多模态数据</span>
@@ -638,10 +570,9 @@ footer span{color:var(--neon-cyan)}
         <span class="result-tag purple">跨部门协作</span>
       </div>
       <ul class="project-duties">
-        <li>设计多媒体数据（图像/视频/文本）特征提取方案，建立特征工程流水线架构</li>
-        <li>运用预训练模型（ResNet、BERT等）提取深度语义特征，特征维度扩展至数千维</li>
-        <li>主导特征选择与降维实验，通过A/B测试验证特征组合的业务价值</li>
-        <li>与推荐算法团队协作，将特征工程成果快速转化为线上业务指标提升</li>
+        <li>设计多媒体数据（图像/视频/文本）特征提取方案</li>
+        <li>运用预训练模型（ResNet、BERT）提取深度语义特征</li>
+        <li>通过A/B测试验证特征组合的业务价值</li>
       </ul>
     </div>
   </div>
@@ -649,13 +580,12 @@ footer span{color:var(--neon-cyan)}
 
 <div class="section-divider"></div>
 
-<!-- SKILLS -->
 <section id="skills">
-  <div class="section-label">💪 核心技能</div>
-  <h2 class="section-title reveal">专业能力<span class="acc">全景图</span></h2>
+  <div class="section-label">核心技能</div>
+  <h2 class="section-title">专业能力全景图</h2>
   <div class="skills-grid">
     <div class="skill-cat delay-1">
-      <div class="skill-cat-title">🔑 项目管理</div>
+      <div class="skill-cat-title">项目管理</div>
       <div class="skill-item">
         <div class="skill-header"><span class="skill-name">项目管理（范围/时间/成本/质量/风险）</span><span class="skill-pct">95%</span></div>
         <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
@@ -678,7 +608,7 @@ footer span{color:var(--neon-cyan)}
       </div>
     </div>
     <div class="skill-cat delay-2">
-      <div class="skill-cat-title">🤖 AI数据技术</div>
+      <div class="skill-cat-title">AI数据技术</div>
       <div class="skill-item">
         <div class="skill-header"><span class="skill-name">AI数据安全治理（分级分类/安全域）</span><span class="skill-pct">90%</span></div>
         <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
@@ -705,41 +635,40 @@ footer span{color:var(--neon-cyan)}
 
 <div class="section-divider"></div>
 
-<!-- CERTIFICATES -->
 <section id="certificates">
-  <div class="section-label">🏅 专业资质</div>
-  <h2 class="section-title reveal">持证<span class="acc">加码</span>的专业认证</h2>
+  <div class="section-label">专业资质</div>
+  <h2 class="section-title">持证加码的专业认证</h2>
   <div class="certs-grid">
     <div class="cert-badge delay-1">
-      <span class="cert-icon">📋</span>
+      <span class="cert-icon">&#128203;</span>
       <div>
         <div class="cert-text">PMP 专业认证</div>
         <div class="cert-sub">项目管理专业人士 · PMI认证</div>
       </div>
     </div>
     <div class="cert-badge delay-2">
-      <span class="cert-icon">🔐</span>
+      <span class="cert-icon">&#128272;</span>
       <div>
         <div class="cert-text">CDGA 数据治理工程师</div>
         <div class="cert-sub">数据治理工程师认证 · DAMA认证</div>
       </div>
     </div>
     <div class="cert-badge delay-3">
-      <span class="cert-icon">🤖</span>
+      <span class="cert-icon">&#128187;</span>
       <div>
         <div class="cert-text">腾讯人工智能从业者认证</div>
         <div class="cert-sub">腾讯官方AI能力认证</div>
       </div>
     </div>
     <div class="cert-badge delay-4">
-      <span class="cert-icon">☁️</span>
+      <span class="cert-icon">&#9925;</span>
       <div>
         <div class="cert-text">阿里云AI项目管理认证</div>
         <div class="cert-sub">阿里云人工智能项目管理从业资格证书</div>
       </div>
     </div>
     <div class="cert-badge delay-5">
-      <span class="cert-icon">⚡</span>
+      <span class="cert-icon">&#9889;</span>
       <div>
         <div class="cert-text">研发效能度量专家</div>
         <div class="cert-sub">研发效能度量与质量分析</div>
@@ -750,34 +679,33 @@ footer span{color:var(--neon-cyan)}
 
 <div class="section-divider"></div>
 
-<!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">📬 联系我</div>
-  <h2 class="section-title reveal">期待与您<span class="acc">交流合作</span></h2>
+  <div class="section-label">联系我</div>
+  <h2 class="section-title">期待与您交流合作</h2>
   <div class="contact-grid">
     <a href="mailto:xcp1017@gmail.com" class="contact-card delay-1">
-      <div class="contact-icon">📧</div>
+      <div class="contact-icon">&#9993;</div>
       <div>
         <div class="contact-label">Email</div>
         <div class="contact-value">xcp1017@gmail.com</div>
       </div>
     </a>
     <a href="tel:+8618129955680" class="contact-card delay-2">
-      <div class="contact-icon">📱</div>
+      <div class="contact-icon">&#128241;</div>
       <div>
         <div class="contact-label">Phone</div>
         <div class="contact-value">+86 181 2995 5680</div>
       </div>
     </a>
     <a href="#" class="contact-card delay-3">
-      <div class="contact-icon">🏢</div>
+      <div class="contact-icon">&#128693;</div>
       <div>
         <div class="contact-label">Company</div>
         <div class="contact-value">蚂蚁集团 · TEG</div>
       </div>
     </a>
     <a href="https://xcpm.site" target="_blank" class="contact-card delay-4">
-      <div class="contact-icon">🌐</div>
+      <div class="contact-icon">&#127760;</div>
       <div>
         <div class="contact-label">Blog</div>
         <div class="contact-value">xcpm.site</div>
@@ -787,76 +715,65 @@ footer span{color:var(--neon-cyan)}
 </section>
 
 <footer>
-  <p>© 2026 奚成朋 · All Rights Reserved &nbsp;|&nbsp; Made with <span>❤</span> &nbsp;|&nbsp; 沪ICP备 xxxxxxxx号</p>
+  <p>Copyright 2026 奚成朋 · All Rights Reserved  · Made with <span>&#10084;</span></p>
 </footer>
 
 <script>
-// ── Particles ──
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-let particles = [];
+var canvas=document.getElementById("particles");
+var ctx=canvas.getContext("2d");
+var particles=[];
 function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}
 resize();window.addEventListener("resize",resize);
-for(let i=0;i<120;i++) particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5+0.5,vx:(Math.random()-0.5)*0.4,vy:(Math.random()-0.5)*0.4});
+for(var i=0;i<120;i++)particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5+0.5,vx:(Math.random()-0.5)*0.4,vy:(Math.random()-0.5)*0.4});
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(let i=0;i<particles.length;i++){
-    const p=particles[i];
+  for(var i=0;i<particles.length;i++){
+    var p=particles[i];
     p.x+=p.vx;p.y+=p.vy;
     if(p.x<0||p.x>canvas.width)p.vx*=-1;
     if(p.y<0||p.y>canvas.height)p.vy*=-1;
     ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
     ctx.fillStyle="rgba(0,245,255,0.4)";ctx.fill();
-    for(let j=i+1;j<particles.length;j++){
-      const q=particles[j],dx=p.x-q.x,dy=p.y-q.y,dist=Math.sqrt(dx*dx+dy*dy);
+    for(var j=i+1;j<particles.length;j++){
+      var q=particles[j],dx=p.x-q.x,dy=p.y-q.y,dist=Math.sqrt(dx*dx+dy*dy);
       if(dist<120){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
-        ctx.strokeStyle=`rgba(0,245,255,${0.15*(1-dist/120)})`;ctx.lineWidth=0.5;ctx.stroke();}
+        ctx.strokeStyle="rgba(0,245,255,"+(0.15*(1-dist/120))+")";ctx.lineWidth=0.5;ctx.stroke();}
     }
   }
   requestAnimationFrame(draw);
 }
 draw();
-
-// ── Typewriter ──
-const phrases=["AI项目管理专家","数据治理工程师","腾讯TEG · 前综合PM","蚂蚁集团 · AI项目经理","PMP认证 · CDGA认证","专注研发效能度量","大模型评测体系建设者"];
-let phraseIdx=0,charIdx=0,deleting=false;
-const tw=document.getElementById("typewriter");
+var phrases=["AI项目管理专家","数据治理工程师","腾讯TEG · 前综合PM","蚂蚁集团 · AI项目经理","PMP认证 · CDGA认证","专注研发效能度量","大模型评测体系建设者"];
+var phraseIdx=0,charIdx=0,deleting=false;
+var tw=document.getElementById("typewriter");
 function type(){
-  const p=phrases[phraseIdx];
+  var p=phrases[phraseIdx];
   if(!deleting){tw.textContent=p.slice(0,++charIdx);if(charIdx===p.length){deleting=true;setTimeout(type,2000);return}}
   else{tw.textContent=p.slice(0,--charIdx);if(charIdx===0){deleting=false;phraseIdx=(phraseIdx+1)%phrases.length}}
   setTimeout(type,deleting?60:100);
 }
 type();
-
-// ── Nav scroll ──
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll",function(){
   document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>60);
 });
-
-// ── Scroll reveal ──
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");}});
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add("visible");});
 },{threshold:0.12});
-document.querySelectorAll(".stat-card,.about-card,.edu-card,.paper-card,.tl-item,.tool-card,.project-card,.skill-cat,.cert-badge,.contact-card,.reveal").forEach(el=>observer.observe(el));
-
-// ── Skill bars ──
-const skillObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.width+"%";}});
+document.querySelectorAll(".stat-card,.about-card,.edu-card,.paper-card,.tl-item,.tool-card,.project-card,.skill-cat,.cert-badge,.contact-card,.reveal").forEach(function(el){observer.observe(el);});
+var skillObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.style.width=e.target.dataset.width+"%";});
 },{threshold:0.5});
-document.querySelectorAll(".skill-fill").forEach(el=>skillObs.observe(el));
-
-// ── Counters ──
-const counterObs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
+document.querySelectorAll(".skill-fill").forEach(function(el){skillObs.observe(el);});
+var counterObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
     if(e.isIntersecting){
-      const el=e.target,target=parseInt(el.dataset.target);
-      let cur=0,step=target/40;
-      const timer=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=Math.floor(cur);if(cur>=target)clearInterval(timer);},40);
+      var el=e.target,target=parseInt(el.dataset.target);
+      var cur=0,step=target/40;
+      var timer=setInterval(function(){cur=Math.min(cur+step,target);el.textContent=Math.floor(cur);if(cur>=target)clearInterval(timer);},40);
     }
   });
 },{threshold:0.5});
-document.querySelectorAll(".counter").forEach(el=>counterObs.observe(el));
+document.querySelectorAll(".counter").forEach(function(el){counterObs.observe(el);});
 </script>
 
 </body>
