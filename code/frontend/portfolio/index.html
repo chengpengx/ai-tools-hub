@@ -339,70 +339,69 @@ footer span{color:var(--neon-cyan)}
     </div>
   </div>
 
-  <!-- 论文成果 -->
+  
   <div class="papers-container">
-    <div class="paper-title reveal">📄 学术研究成果</div>
+    <div class="paper-title reveal">📄 学术成果</div>
     <div class="paper-card delay-1">
       <div class="paper-header">
         <span class="paper-icon">📄</span>
         <div>
-          <div class="paper-name">《基于随机森林的岩性智能识别方法》</div>
-          <div class="paper-journal">地学期刊 · 已发表</div>
+          <div class="paper-name">《基于全卷积神经网络拾取地震波时间窗口的研究》</div>
+          <div class="paper-journal">南京大学 · 硕士电子期刊 · 2022年（第05期）</div>
         </div>
       </div>
       <div class="paper-abstract">
-        <strong>研究背景：</strong>传统岩性识别依赖地质学家经验，效率低下且主观性强。随着地质数据量快速增长，利用机器学习实现岩性自动化识别成为地学信息化重要方向。<br><br>
-        <strong>研究方法：</strong>提出基于<span class="highlight">随机森林（Random Forest）算法</span>的岩性智能识别方法，提取岩石样本化学成分、矿物组成、物理性质等多维地质特征，构建完整特征工程体系。采集超过5000个岩性样本，利用XRF和薄片鉴定获取特征数据，通过交叉验证和网格搜索优化超参数，建立准确率超过92%的岩性分类模型。<br><br>
-        <strong>创新贡献：</strong>（1）首次将随机森林应用于多成因类型岩性分类；（2）设计基于地质特征重要性排序的特征选择策略；（3）构建可解释性较强的岩性分类规则库，为地质学家提供辅助决策支持。<br><br>
-        <strong>关键词：</strong>随机森林、岩性识别、机器学习、特征工程、地质数据挖掘
+        <strong>研究背景：</strong>利用地震波形资料反演地球内部结构是地震学成像领域最先进的反演方法之一，但传统时窗拾取方法已不能满足海量数据反演时的效率要求。<br><br>
+        <strong>研究方法：</strong>采用全卷积神经网络自动拾取复杂地震波信号，从实际勘探地震数据中选取37960条波形样本，每个样本重采样为4992个点。搭建36个卷积层（含7个降采样和7个上采样部分），经1000次迭代训练后达到较好识别效果。<br><br>
+        <strong>核心成果：</strong>预测每条地震记录约需10<sup>-5</sup>秒，相比传统方法（STA/LTA）快约<strong>10000倍</strong>，为百万级勘探地震数据的时间窗口选取提供高效技术支撑。<br><br>
+        <strong>DOI：</strong>10.27235/d.cnki.gnjiu.2021.001662
       </div>
       <div class="paper-tags">
-        <span class="paper-tag">随机森林</span>
-        <span class="paper-tag">岩性识别</span>
-        <span class="paper-tag">机器学习</span>
-        <span class="paper-tag">特征工程</span>
+        <span class="paper-tag">全卷积神经网络</span>
+        <span class="paper-tag">深度学习</span>
+        <span class="paper-tag">地震波形反演</span>
+        <span class="paper-tag">震相拾取</span>
       </div>
     </div>
     <div class="paper-card delay-2">
       <div class="paper-header">
-        <span class="paper-icon">📄</span>
+        <span class="paper-icon">🏛️</span>
         <div>
-          <div class="paper-name">《融合多源数据的矿产资源预测模型》</div>
-          <div class="paper-journal">地学期刊 · 已发表</div>
+          <div class="paper-name">《基于全卷积神经网络的地震波形时间窗口拾取》</div>
+          <div class="paper-journal">SPG/SEG南京2020年国际地球物理会议 · 2020年9月</div>
         </div>
       </div>
       <div class="paper-abstract">
-        <strong>研究背景：</strong>传统矿产资源预测依赖单一数据源，难以全面刻画成矿系统复杂性。随着遥感、地球化学、地球物理等多源大数据日趋丰富，融合多源异构数据提升预测精度成为前沿课题。<br><br>
-        <strong>研究方法：</strong>提出<span class="highlight">融合多源数据的深度学习矿产资源预测模型</span>，将卷积神经网络（CNN）与注意力机制相结合，整合地球化学数据、航磁异常、Landsat遥感蚀变信息、矿床点空间分布、地质构造线等五类数据源，通过多尺度特征融合框架实现统一表征与联合建模。<br><br>
-        <strong>实验结果：</strong>在三大成矿带150个已知矿床点验证中，精准率87.3%、召回率81.5%、F1-score84.3%，显著优于逻辑回归和支持向量机模型。模型预测与实际勘探验证吻合良好，3处高潜力区域中2处经后续钻探发现工业矿体。<br><br>
-        <strong>应用价值：</strong>研究成果已应用于国家自然科学基金项目《深层矿产资源智能评价系统》，为勘探决策提供数据驱动依据。<br><br>
-        <strong>关键词：</strong>多源数据融合、深度学习、矿产资源预测、注意力机制、遥感蚀变信息
+        <strong>会议：</strong>SPG/SEG南京2020年国际地球物理会议（联合主办：地球物理学会SEG与中国石油学会SPG）<br><br>
+        <strong>核心成果：</strong>提出基于全卷积神经网络的地震波形时间窗口自动拾取方法，预测百万级地震数据样本仅需数十秒完成，相比传统方法提升效率约10000倍，为全波形反演中的时间窗口选取提供更高效的技术支撑。<br><br>
+        <strong>DOI：</strong>10.26914/c.cnkihy.2020.014981
       </div>
       <div class="paper-tags">
+        <span class="paper-tag">国际会议</span>
+        <span class="paper-tag">全波形反演</span>
         <span class="paper-tag">深度学习</span>
-        <span class="paper-tag">多源数据融合</span>
-        <span class="paper-tag">矿产资源预测</span>
-        <span class="paper-tag">注意力机制</span>
+        <span class="paper-tag">SPG/SEG</span>
       </div>
     </div>
     <div class="paper-card delay-3">
       <div class="paper-header">
         <span class="paper-icon">🔬</span>
         <div>
-          <div class="paper-name">国家自然科学基金项目《深层矿产资源智能评价系统》</div>
-          <div class="paper-journal">国家自然科学基金（NSFC）· 参与研究</div>
+          <div class="paper-name">《一种基于全卷积神经网络的震相特征识别波形反演方法》</div>
+          <div class="paper-journal">发明授权专利 · 专利号：CN202010566725.2 · 2023年授权</div>
         </div>
       </div>
       <div class="paper-abstract">
-        <strong>项目概况：</strong>作为主要参与成员，我深度参与了国家自然科学基金项目《深层矿产资源智能评价系统》的研究与开发工作，构建面向深层（埋深>500米）矿产资源评价的智能化系统，整合地质、地球物理等多学科数据，运用机器学习与大数据分析实现储量智能预测。<br><br>
-        <strong>我的贡献：</strong>（1）<strong>数据处理模块</strong>：设计面向多源异构地质数据的自动化清洗、标准化与融合pipeline，日均处理数据量超10GB，支持多格式批量导入与质量校验；（2）<strong>模型搭建模块</strong>：基于PyTorch实现融合地质约束条件的深度学习预测模型，解决深层矿体训练样本稀缺难题，测试准确率达85%+。<br><br>
-        <strong>技术成果：</strong>项目发表SCI论文2篇（中科院二区），申请软件著作权1项，培养硕士研究生2名。技术在新疆阿勒泰铜矿等国家重点勘查区推广应用。
+        <strong>发明人：</strong>阮友谊、江文彬、<strong>奚成朋</strong>、王文闯<br>
+        <strong>专利权人：</strong>南京大学；中国石油集团东方地球物理勘探有限责任公司<br><br>
+        <strong>技术方案：</strong>利用全卷积神经网络对地震波形数据进行震相特征识别与时间窗口划分，结合传统震相筛选方法（FLEXWIN）构建训练集，通过理论与观测数据的振幅比、互相关系数和走时差三重校验筛选有效波形进行反演，有效改善周期跳跃问题，提高波形反演的收敛速度。<br><br>
+        <strong>应用价值：</strong>解决波形反演中的时间窗口高效拾取问题，为地震勘探全波形反演提供智能化技术支撑。
       </div>
       <div class="paper-tags">
-        <span class="paper-project">国家自然科学基金</span>
-        <span class="paper-project">数据处理</span>
-        <span class="paper-project">PyTorch</span>
-        <span class="paper-project">深层矿产资源</span>
+        <span class="paper-project">发明专利</span>
+        <span class="paper-project">CN202010566725.2</span>
+        <span class="paper-project">2023年授权</span>
+        <span class="paper-project">全波形反演</span>
       </div>
     </div>
   </div>
