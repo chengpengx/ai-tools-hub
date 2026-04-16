@@ -400,6 +400,16 @@
         .author-certs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
         .author-cert { font-size: 10px; padding: 3px 8px; border-radius: 4px; background: rgba(180,85,247,0.1); color: #a855f7; border: 1px solid rgba(180,85,247,0.2); }
 
+        /* Grid布局 - 主内容左 + 侧边栏右 */
+        @media (min-width: 1024px) {
+            .lg\:grid-main {
+                grid-template-columns: 1fr 300px !important;
+            }
+            .lg\:col-sidebar {
+                grid-column: 2;
+            }
+        }
+
         /* ── 空状态 ── */
         .empty-wrap { background: var(--bg-card); border: 1px solid var(--border); }
         .empty-title { color: var(--text-primary); }
@@ -483,11 +493,81 @@
 
     <!-- ── 主内容 ── -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex flex-col lg:flex-row gap-8">
+        <div style="display:grid;grid-template-columns:1fr;gap:32px" class="lg:grid-main">
 
-            <!-- ── 左侧作者 ── -->
-            <aside class="lg:w-80 flex-shrink-0 order-2 lg:order-1">
-                <div class="author-card sticky top-24">
+            <!-- ── 主内容区 ── -->
+
+                <!-- Hero -->
+                <div class="text-center mb-10">
+                    <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6">
+                        <span style="width:7px;height:7px;background:#10b981;border-radius:50%;display:inline-block;animation:pulse-dot 2s infinite"></span>
+                        <span style="font-size:13px;font-weight:500">精选 100+ AI 工具，持续更新</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-black hero-title mb-3 tracking-tight">
+                        发现最好的 <span class="hero-accent">AI 工具</span>
+                    </h1>
+                    <p class="hero-sub text-base max-w-lg mx-auto">
+                        精心筛选优质 AI 工具，覆盖对话、绘图、视频、代码等全品类，一站找到适合你的效率神器
+                    </p>
+                </div>
+
+                <!-- 编辑精选 -->
+                <div id="featuredSection" class="mb-10">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="section-label">Editor's Picks</span>
+                        <h2 class="section-title">🔥 编辑精选</h2>
+                        <span class="section-badge">值得收藏</span>
+                    </div>
+                    <div id="featuredScroll" class="featured-scroll overflow-x-auto pb-3 -mx-4 px-4">
+                        <div id="featuredTools" class="flex gap-4" style="min-width:max-content;"></div>
+                    </div>
+                </div>
+
+                <!-- 分类Tab -->
+                <div class="mb-6">
+                    <div class="cat-tabs" id="categoryTabs">
+                        <button data-category="all" class="cat-tab active">全部工具</button>
+                        <button data-category="chat" class="cat-tab">💬 AI对话</button>
+                        <button data-category="image" class="cat-tab">🎨 AI绘图</button>
+                        <button data-category="video" class="cat-tab">🎬 视频生成</button>
+                        <button data-category="code" class="cat-tab">💻 代码辅助</button>
+                        <button data-category="writing" class="cat-tab">✍️ 写作助手</button>
+                        <button data-category="productivity" class="cat-tab">📊 效率办公</button>
+                        <button data-category="pm" class="cat-tab">📋 AI项目管理</button>
+                        <button data-category="favorites" class="cat-tab">❤️ 收藏</button>
+                    </div>
+                </div>
+
+                <!-- 标签筛选 -->
+                <div class="mb-8">
+                    <div class="tag-filters" id="tagFilters">
+                        <button data-tag="all" class="tag-btn active">全部</button>
+                        <button data-tag="免费" class="tag-btn">🆓 免费</button>
+                        <button data-tag="付费" class="tag-btn">💰 付费</button>
+                        <button data-tag="开源" class="tag-btn">🔧 开源</button>
+                        <button data-tag="国产" class="tag-btn">🇨🇳 国产</button>
+                        <button data-tag="API" class="tag-btn">⚡ 支持API</button>
+                    </div>
+                </div>
+
+                <!-- 工具网格 -->
+                <div id="loadingState" class="flex items-center justify-center py-24 gap-3">
+                    <div class="spinner"></div>
+                    <span style="color: var(--text-secondary); font-size: 14px">加载中...</span>
+                </div>
+                <div id="toolsGrid" class="tools-grid"></div>
+
+                <!-- 空状态 -->
+                <div id="emptyState" class="hidden text-center py-20">
+                    <div class="empty-wrap w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="search-x" class="w-7 h-7" style="color: var(--text-secondary)"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold empty-title mb-2">没有找到匹配的工具</h3>
+                    <p class="empty-sub text-sm">换个关键词或筛选条件试试</p>
+                </div>
+            </div>
+        </div>
+    <!-- ── 作者信息侧边栏 ── -->
                     <div class="author-header">
                         <div class="author-avatar">奚</div>
                         <div class="author-name">奚成朋</div>
@@ -605,80 +685,9 @@
                 </div>
             </aside>
 
-            <!-- ── 右侧内容 ── -->
-            <div class="flex-1 order-1 lg:order-2">
+        </main>
 
-                <!-- Hero -->
-                <div class="text-center mb-10">
-                    <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6">
-                        <span style="width:7px;height:7px;background:#10b981;border-radius:50%;display:inline-block;animation:pulse-dot 2s infinite"></span>
-                        <span style="font-size:13px;font-weight:500">精选 100+ AI 工具，持续更新</span>
-                    </div>
-                    <h1 class="text-3xl sm:text-4xl font-black hero-title mb-3 tracking-tight">
-                        发现最好的 <span class="hero-accent">AI 工具</span>
-                    </h1>
-                    <p class="hero-sub text-base max-w-lg mx-auto">
-                        精心筛选优质 AI 工具，覆盖对话、绘图、视频、代码等全品类，一站找到适合你的效率神器
-                    </p>
-                </div>
-
-                <!-- 编辑精选 -->
-                <div id="featuredSection" class="mb-10">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="section-label">Editor's Picks</span>
-                        <h2 class="section-title">🔥 编辑精选</h2>
-                        <span class="section-badge">值得收藏</span>
-                    </div>
-                    <div id="featuredScroll" class="featured-scroll overflow-x-auto pb-3 -mx-4 px-4">
-                        <div id="featuredTools" class="flex gap-4" style="min-width:max-content;"></div>
-                    </div>
-                </div>
-
-                <!-- 分类Tab -->
-                <div class="mb-6">
-                    <div class="cat-tabs" id="categoryTabs">
-                        <button data-category="all" class="cat-tab active">全部工具</button>
-                        <button data-category="chat" class="cat-tab">💬 AI对话</button>
-                        <button data-category="image" class="cat-tab">🎨 AI绘图</button>
-                        <button data-category="video" class="cat-tab">🎬 视频生成</button>
-                        <button data-category="code" class="cat-tab">💻 代码辅助</button>
-                        <button data-category="writing" class="cat-tab">✍️ 写作助手</button>
-                        <button data-category="productivity" class="cat-tab">📊 效率办公</button>
-                        <button data-category="pm" class="cat-tab">📋 AI项目管理</button>
-                        <button data-category="favorites" class="cat-tab">❤️ 收藏</button>
-                    </div>
-                </div>
-
-                <!-- 标签筛选 -->
-                <div class="mb-8">
-                    <div class="tag-filters" id="tagFilters">
-                        <button data-tag="all" class="tag-btn active">全部</button>
-                        <button data-tag="免费" class="tag-btn">🆓 免费</button>
-                        <button data-tag="付费" class="tag-btn">💰 付费</button>
-                        <button data-tag="开源" class="tag-btn">🔧 开源</button>
-                        <button data-tag="国产" class="tag-btn">🇨🇳 国产</button>
-                        <button data-tag="API" class="tag-btn">⚡ 支持API</button>
-                    </div>
-                </div>
-
-                <!-- 工具网格 -->
-                <div id="loadingState" class="flex items-center justify-center py-24 gap-3">
-                    <div class="spinner"></div>
-                    <span style="color: var(--text-secondary); font-size: 14px">加载中...</span>
-                </div>
-                <div id="toolsGrid" class="tools-grid"></div>
-
-                <!-- 空状态 -->
-                <div id="emptyState" class="hidden text-center py-20">
-                    <div class="empty-wrap w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="search-x" class="w-7 h-7" style="color: var(--text-secondary)"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold empty-title mb-2">没有找到匹配的工具</h3>
-                    <p class="empty-sub text-sm">换个关键词或筛选条件试试</p>
-                </div>
-            </div>
-        </div>
-    </main>
+            
 
     <!-- ── Footer ── -->
     <footer style="margin-top:80px">
