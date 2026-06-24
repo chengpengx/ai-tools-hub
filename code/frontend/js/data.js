@@ -5,6 +5,18 @@
 
 const TOOLS_DATA = [
     {
+        id: "107",
+        name: "Auferet",
+        icon: "sparkles",
+        description: "免费 AI 角色扮演游戏，AI 游戏主持人能记住你的世界与上传的设定，支持 5e 与 Pathfinder 2e 规则、骰子与数值追踪，可单人或多人，网页与安卓端。",
+        summary: "会记忆的 AI 游戏主持人",
+        tags: ["免费", "付费订阅"],
+        url: "https://auferet.com",
+        category: "writing",
+        pricing: "免费+付费",
+        featured: false
+    },
+    {
         id: "1",
         name: "ChatGPT",
         icon: "sparkles",
